@@ -4,17 +4,17 @@ import Card from './Component/Card'
 
 const UserList = () => {
 
-    const [users , setUsers] = useState([])
+    const [listOfUSer , setListOfUSer] = useState([])
 
    useEffect(() => {
     axios.get("https://jsonplaceholder.typicode.com/users")
-    .then (res => setUsers(res.data))
+    .then (res => setListOfUSer(res.data))
     .catch(err => err)
    }, [])
    
     return (
         <div className="cards">
-        {users.map(el => <Card
+        {listOfUSer.map(el => <Card
                         key = {el.id}
                         name = {el.name}
                         username = {el.username}
