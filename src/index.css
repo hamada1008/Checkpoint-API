@@ -1,0 +1,110 @@
+.app{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #6d6a71;
+}
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap row;
+    align-items: space-around;
+}
+
+span{
+    font-size: 0.8rem;
+}
+
+
+.card {
+    
+    display: grid;
+    margin: 50px 20px;
+    height: 250px;
+    width: 25%;
+    grid-template-columns:48% 52%;
+    grid-template-rows: 5% 35% 60%;
+    border: 3px black solid;
+    border-radius: 20px;
+    /* background-image: linear-gradient(to bottom, #89b4f3, #99c5f6, #add4f9, #c5e4fc, #def2ff); */
+   background-image: URL(https://png.pngtree.com/thumb_back/fh260/back_our/20190623/ourmid/pngtree-blue-geometric-business-minimalistic-business-card-background-image_237858.jpg);
+   background-clip: content-box;
+   background-repeat: no-repeat;
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+
+}
+
+.info {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    font-family: 'Lobster', cursive;
+    position: absolute;
+    top: -35px;
+    left : 15%;
+    color: blanchedalmond;
+    font-size: 1.2rem;
+}
+.names {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto 0;
+    grid-column-start: 2;
+    grid-row-start: 2;
+ 
+}
+.names span , .names strong{
+    font-size: 0.99rem;
+}
+.address {
+    margin: auto 0;
+    text-align: left;
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+.otherInfo {
+    
+    margin: auto 0;
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+.picture {
+    margin: auto ;
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+.picture img {
+    height: 100px;
+    border-radius: 50%;
+    place-items: center ;
+}
+
+.otherInfo img {
+    margin: 0 5px 0 0;
+    width: 20px;
+    overflow-x: hidden;
+    
+}
+.otherInfo p {
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0;
+
+}
+
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -15%;
+    left: -5%;
+    right: -5%;
+    bottom: -5%;
+    z-index: 2;
+    background-color: #6d6a71;
+    animation: cardAnimation 1.5s ease 0s forwards;
+}
+
+@keyframes cardAnimation {
+    to { top : 105%}
+}
